@@ -26,6 +26,12 @@ The Auction System is a web-based application that enables users to create, mana
 
 ---
 
+## Limitations
+
+- **Money Withdrawal**: Currently, the system does not support money withdrawal functionality. This feature is planned for future releases.
+
+---
+
 ## Installation
 
 Follow these steps to set up the Auction System locally:
@@ -34,8 +40,8 @@ Follow these steps to set up the Auction System locally:
 
 - Java 11 or higher
 - Maven 3.x
-- A relational database (e.g., MySQL, PostgreSQL)
-- A web server (e.g., Apache Tomcat)
+- A relational database (e.g. SQLite)
+- A web server (e.g., Payara Server)
 
 ### Steps
 
