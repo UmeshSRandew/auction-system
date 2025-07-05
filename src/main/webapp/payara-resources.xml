@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE resources PUBLIC
+        "-//Payara.fish//DTD Payara Server 6 Resource Definitions//EN"
+        "https://docs.payara.fish/schemas/payara-resources_1_6.dtd">
+<resources>
+    <!-- Topic for broadcasting auction events -->
+    <admin-object-resource enabled="true" 
+            jndi-name="jms/AuctionTopic"
+            object-type="user"
+            res-adapter="jmsra"
+            res-type="jakarta.jms.Topic">
+        <description>Auction System Bid Notifications Topic (Application Scoped)</description>
+        <property name="Name" value="AuctionTopicPhysical"/>
+    </admin-object-resource>
+    
+    <!-- Queue for processing notifications -->
+    <admin-object-resource enabled="true"
+            jndi-name="jms/NotificationQueue"
+            object-type="user"
+            res-adapter="jmsra"
+            res-type="jakarta.jms.Queue">
+        <description>Auction System Notification Processing Queue</description>
+        <property name="Name" value="NotificationQueuePhysical"/>
+    </admin-object-resource>
+</resources>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE resources PUBLIC "-//GlassFish.org//DTD GlassFish Application Server 3.1 Resource Definitions//EN" "http://glassfish.org/dtds/glassfish-resources_1_5.dtd">
+<resources>
+    <!-- Topic for broadcasting auction events -->
+    <admin-object-resource enabled="true" jndi-name="jms/AuctionTopic" 
+                          object-type="user" res-adapter="jmsra" 
+                          res-type="jakarta.jms.Topic">
+        <property name="Name" value="AuctionTopicPhysical"/>
+    </admin-object-resource>
+    
+    <!-- Queue for processing notifications -->
+    <admin-object-resource enabled="true" jndi-name="jms/NotificationQueue" 
+                          object-type="user" res-adapter="jmsra" 
+                          res-type="jakarta.jms.Queue">
+        <property name="Name" value="NotificationQueuePhysical"/>
+    </admin-object-resource>
+    
+    <!-- JMS Connection Factory -->
+    <connector-resource enabled="true" jndi-name="jms/__defaultConnectionFactory" 
+                       object-type="system-all" pool-name="jms/ConnectionFactoryPool"/>
+    
+    <connector-connection-pool name="jms/ConnectionFactoryPool" 
+                              connection-definition-name="jakarta.jms.ConnectionFactory" 
+                              resource-adapter-name="jmsra"/>
+</resources> 

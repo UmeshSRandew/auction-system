@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context antiJARLocking="true" path="/auction-system-advanced">
+    <JarScanner>
+        <JarScanFilter defaultTldScan="false"/>
+    </JarScanner>
+    <Resources>
+        <PreResources className="org.apache.catalina.webresources.DirResourceSet"
+                     base="${catalina.base}/shared"
+                     webAppMount="/WEB-INF/lib"/>
+    </Resources>
+</Context> 
